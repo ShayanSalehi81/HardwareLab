@@ -37,17 +37,17 @@ Benchmark the performance of a speech command recognition model on an STM32 micr
 
 ## **3. Model Preparation and Conversion**
 
-### **a. Convert the Model to TensorFlow Lite**
+### **a. Model Converter to TensorFlow Lite**
 
-Convert trained TensorFlow model to TensorFlow Lite (TFLite) format with optimizations suitable for embedded devices.
+With the code in ModelConverter.py
 
-### **c. Validate the TFLite Model**
+### **c. The TFLite Model Validator**
 
 With the aid of ValidatTFModel.py
 
 ## **4. Setting Up the STM32 Environment**
 
-### **a. Install STM32CubeIDE and STM32Cube.AI**
+### **a. STM32CubeIDE and STM32Cube.AI**
 
 1. **STM32CubeIDE:**
    - install from [STMicroelectronics](https://www.st.com/en/development-tools/stm32cubeide.html).
@@ -59,13 +59,13 @@ With the aid of ValidatTFModel.py
 
 ### **a. Convert TFLite Model to C Code Using STM32Cube.AI**
 
-1. **Launch STM32Cube.AI:**
+1. **STM32Cube.AI:**
    - STM32CubeIDE and navigate to **`STM32Cube.AI`** perspective.
 
-2. **Import the TFLite Model:**
+2. **The TFLite Model:**
    - Select `speech_commands_model.tflite` file.
 
-3. **Generate the C Code:**
+3. **The C Code:**
    - STM32Cube.AI will generate optimized C code.
 
 ### **b. Create a New STM32 Project**
