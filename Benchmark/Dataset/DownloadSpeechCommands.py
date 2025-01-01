@@ -3,15 +3,12 @@ import argparse
 import os
 
 def download_speech_commands(data_dir):
-    builder = tfds.builder('speech_commands')
-    if builder.exists(data_dir):
-        print(f"Speech Commands dataset already exists in '{data_dir}'.")
-    else:
-        print(f"Downloading Speech Commands dataset to '{data_dir}'...")
-
-        ds, info = tfds.load('speech_commands', data_dir=data_dir, with_info=True, as_supervised=True)
-        print("Download and preparation complete.")
-        print(info)
+    print(f"Downloading Speech Commands dataset to '{data_dir}' (if not already present)...")
+    
+    ds, info = tfds.load('speech_commands', data_dir=data_dir, with_info=True, as_supervised=True)
+    
+    print("Download and preparation complete.")
+    print(info)
 
 def main():
     parser = argparse.ArgumentParser(description="Download Speech Commands v2 Dataset.")
