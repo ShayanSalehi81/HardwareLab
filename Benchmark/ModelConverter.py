@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-saved_model_dir = 'Benchmark/KeywordSpottingTrainer/trained_models/kws_ref_model.md5'
+saved_model_dir = 'Benchmark/KeywordSpottingTrainer/trained_models/kws_ref_model'
 converter = tf.lite.TFLiteConverter.from_saved_model(saved_model_dir)
 
 converter.optimizations = [tf.lite.Optimize.DEFAULT]
